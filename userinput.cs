@@ -6,9 +6,15 @@ namespace User_Registration
 {
     class userinput
     {
-        public static string inputFirstName() 
+        public static string inputFirstName()
         {
             Console.Write("Enter Your First name : ");
+            return Console.ReadLine();
+        }
+
+        public static string inputLastName()
+        {
+            Console.Write("Enter Your Last name : ");
             return Console.ReadLine();
         }
 
