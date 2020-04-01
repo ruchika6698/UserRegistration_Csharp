@@ -24,13 +24,13 @@ namespace User_Registration
             return Console.ReadLine();
         }
 
-        public static string MobileNumber()
+        public static string inputMobileNumber()
         {
             Console.Write("Enter Your Mobile Number : ");
             return Console.ReadLine();
         }
 
-        public static string Password()
+        public static string inputPassword()
         {
             Console.Write("Enter Your Password: ");
             return Console.ReadLine();
