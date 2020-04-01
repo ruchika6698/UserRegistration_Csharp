@@ -23,5 +23,11 @@ namespace User_Registration
             Console.Write("Enter Your Email Address : ");
             return Console.ReadLine();
         }
+
+        public static string MobileNumber()
+        {
+            Console.Write("Enter Your Mobile Number : ");
+            return Console.ReadLine();
+        }
     }
 }

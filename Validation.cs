@@ -6,23 +6,14 @@ namespace User_Registration
 {
     class Validation
     {
-
-        static void Main(string[] args)
+        interface Validator
         {
-            Console.WriteLine("Filled the Details of User and Register:");
+            string checkMatch(string exp, string stringToCheck);
+            string ValidateFirstName(string FirstName);
+            string ValidateLastName(string LastName);
+            string ValidateEmail(string Email);
+            string ValidateMobileNumber(string MobileNumber);
 
-            UserRegistration userRes = new UserRegistration();
-
-            string FirstName = UserInput.inputFirstName();
-            string value = $"First name {userRes.validateFirstName(FirstName)}";
-            Console.WriteLine(value);
-
-            string LastName = UserInput.inputLastName();
-            Console.WriteLine($"Last name {userRes.validateLastName(LastName)}")
-
-            string Email = Usernput.inputEmail();
-            Console.WriteLine($"Email {userRes.validateEmail(Email)}");
         }
-        
     }
 }
