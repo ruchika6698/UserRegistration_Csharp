@@ -47,6 +47,12 @@ namespace User_Registration
             return checkMatch(expr, stringToMatch: MobileNumber);
         }
 
+        public string validatePassword(string Password)
+        {
+            var expr = "^[a-zA-Z]{8,15}$";
+            return checkMatch(expr, stringToMatch: Password);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Filled the Details of User and Register:");
@@ -65,6 +71,9 @@ namespace User_Registration
 
             string MobileNumber = UserInput.inputMobileNumber();
             Console.WriteLine($"MobileNumber {userRes.validateEmail(MobileNumber)}");
+
+            string Password = UserInput.inputPassword();
+            Console.WriteLine($"Password {userRes.validateEmail(Password)}");
         }
     }
 }

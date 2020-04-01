@@ -13,6 +13,7 @@ namespace User_Registration
             string ValidateLastName(string LastName);
             string ValidateEmail(string Email);
             string ValidateMobileNumber(string MobileNumber);
+            string ValidatePassword(string Password);
 
         }
     }
