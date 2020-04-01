@@ -14,11 +14,11 @@ namespace User_Registration
             var match = Regex.Match(stringToMatch, exp, RegexOptions.None);
             if (match.Success)
             {
-                return "valid";
+                return "Details are Valid";
             }
             else
             {
-                return "invalid";
+                return "Invalid Data or Format";
             }
         }
 
@@ -34,18 +34,10 @@ namespace User_Registration
             var expr = "^[A-Z][a-zA-Z]{3,15}$";
             return checkMatch(expr, stringToMatch: FirstName);
         }
-
-        static void Main(string[] args)
+        public string validateEmail(string Email)
         {
-            Console.WriteLine("Filled the Details of User and Register:");
-
-            UserRegistration userRes = new UserRegistration();
-
-            string FirstName = UserInput.inputFirstName();
-            Console.WriteLine($"First name {userRes.validateFirstName(FirstName)}");
-
-            string LastName = UserInput.inputLastName();
-            Console.WriteLine($"First name {userRes.validateLastName(LastName)}");
+            var expr = "^[a-zA-Z0-9]{1,}([.]?[-]?[+]?[a-zA-Z0-9]{1,})?[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$";
+            return checkMatch(expr, stringToMatch: Email);
         }
     }
 }

@@ -18,5 +18,10 @@ namespace User_Registration
             return Console.ReadLine();
         }
 
+        public static string inputEmail()
+        {
+            Console.Write("Enter Your Email Address : ");
+            return Console.ReadLine();
+        }
     }
 }
