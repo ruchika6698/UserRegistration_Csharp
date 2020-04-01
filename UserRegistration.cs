@@ -23,33 +23,33 @@ namespace User_Registration
         }
 
         //method to Validate First Name
-        public string validateFirstName(string FirstName)
+        public string ValidateFirstName(string FirstName)
         {
             var expr = "^[A-Z][a-zA-Z]{3,15}$";
             return checkMatch(expr, stringToMatch: FirstName);
         }
         //method to Validate Last Name
-        public string validateLastName(string FirstName)
+        public string ValidateLastName(string FirstName)
         {
             var expr = "^[A-Z][a-zA-Z]{3,15}$";
             return checkMatch(expr, stringToMatch: FirstName);
         }
         //method to validate Email
-        public string validateEmail(string Email)
+        public string ValidateEmail(string Email)
         {
             var expr = "^[a-zA-Z0-9]{1,}([.]?[-]?[+]?[a-zA-Z0-9]{1,})?[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$";
             return checkMatch(expr, stringToMatch: Email);
         }
         //method to validate Mobile Number
-        public string validateMobileNumber(string MobileNumber)
+        public string ValidateMobileNumber(string MobileNumber)
         {
             var expr = "^[0-9]{2}[ ][0-9]{10}$";
             return checkMatch(expr, stringToMatch: MobileNumber);
         }
 
-        public string validatePassword(string Password)
+        public string ValidatePassword(string Password)
         {
-            var expr = "^[a-zA-Z]{8,15}$";
+            var expr = "^[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$";
             return checkMatch(expr, stringToMatch: Password);
         }
 
@@ -60,20 +60,20 @@ namespace User_Registration
             UserRegistration userRes = new UserRegistration();
 
             string FirstName = UserInput.inputFirstName();
-            string value = $"First name {userRes.validateFirstName(FirstName)}";
+            string value = $"First name {userRes.ValidateFirstName(FirstName)}";
             Console.WriteLine(value);
 
             string LastName = UserInput.inputLastName();
-            Console.WriteLine($"Last name {userRes.validateLastName(LastName)}");
+            Console.WriteLine($"Last name {userRes.ValidateLastName(LastName)}");
 
             string Email = UserInput.inputEmail();
-            Console.WriteLine($"Email {userRes.validateEmail(Email)}");
+            Console.WriteLine($"Email {userRes.ValidateEmail(Email)}");
 
             string MobileNumber = UserInput.inputMobileNumber();
-            Console.WriteLine($"MobileNumber {userRes.validateEmail(MobileNumber)}");
+            Console.WriteLine($"MobileNumber {userRes.ValidateEmail(MobileNumber)}");
 
             string Password = UserInput.inputPassword();
-            Console.WriteLine($"Password {userRes.validateEmail(Password)}");
+            Console.WriteLine($"Password {userRes.ValidateEmail(Password)}");
         }
     }
 }
