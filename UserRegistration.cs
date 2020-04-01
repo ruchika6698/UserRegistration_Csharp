@@ -5,9 +5,8 @@ namespace User_Registration
 {
     class UserRegistration : Validation
     {
-        private static readonly object UserInput;
-        private static string FirstName;
-
+        private static readonly object Userinput;
+   
         // interface method to match
         public string checkMatch(string exp, string stringToMatch)
         {
@@ -21,6 +20,7 @@ namespace User_Registration
                 return "Invalid Data or Format";
             }
         }
+
 
         //method to Validate First Name
         public string ValidateFirstName(string FirstName)
@@ -59,21 +59,11 @@ namespace User_Registration
 
             UserRegistration userRes = new UserRegistration();
 
-            string FirstName = UserInput.inputFirstName();
-            string value = $"First name {userRes.ValidateFirstName(FirstName)}";
-            Console.WriteLine(value);
-
-            string LastName = UserInput.inputLastName();
-            Console.WriteLine($"Last name {userRes.ValidateLastName(LastName)}");
-
-            string Email = UserInput.inputEmail();
-            Console.WriteLine($"Email {userRes.ValidateEmail(Email)}");
-
-            string MobileNumber = UserInput.inputMobileNumber();
-            Console.WriteLine($"MobileNumber {userRes.ValidateEmail(MobileNumber)}");
-
-            string Password = UserInput.inputPassword();
-            Console.WriteLine($"Password {userRes.ValidateEmail(Password)}");
+            Console.WriteLine($"FirstName {userRes.ValidateFirstName(FirstName: (string)Userinput.inputFirstName())}");
+            Console.WriteLine($"LastName {userRes.ValidateLastName(LastName: (string)Userinput.inputLastName())}");
+            Console.WriteLine($"Email {userRes.ValidateEmail(Email: (string)Userinput.inputEmail())}");
+            Console.WriteLine($"MobileNumber {userRes.ValidateMobileNumber(MobileNumber: (string)Userinput.inputMobileNumber())}");
+            Console.WriteLine($"Password {userRes.ValidatePassword(Password: (string)Userinput.inputPassword())}");
         }
     }
 }

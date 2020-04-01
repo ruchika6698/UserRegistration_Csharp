@@ -6,7 +6,7 @@ namespace User_Registration
 {
     class Validation
     {
-        interface Validator
+        interface Validate
         {
             string checkMatch(string exp, string stringToCheck);
             string ValidateFirstName(string FirstName);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace User_Registration
 {
-    class userinput
+    class Userinput
     {
         public static string inputFirstName()
         {
