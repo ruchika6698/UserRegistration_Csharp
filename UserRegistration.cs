@@ -49,7 +49,7 @@ namespace User_Registration
 
         public string ValidatePassword(string Password)
         {
-            var expr = "^[A-Z]{1,}[a-zA-Z]{8,}[0-9]$";
+            var expr = "^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
             return checkMatch(expr, stringToMatch: Password);
         }
 
