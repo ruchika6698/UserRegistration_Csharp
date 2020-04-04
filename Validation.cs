@@ -8,7 +8,7 @@ namespace User_Registration
     {
         interface Validate
         {
-            string checkMatch(string exp, string stringToCheck);
+            string checkMatch(string expression, string stringToCheck);
             string ValidateFirstName(string FirstName);
             string ValidateLastName(string LastName);
             string ValidateEmail(string Email);
