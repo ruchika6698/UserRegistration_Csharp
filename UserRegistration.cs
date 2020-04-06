@@ -7,12 +7,12 @@ namespace User_Registration
     {
         /// <summary>
         /// Class for User Inputs
-        /// </summary
+        /// </summary>
         class Userinput
         {
             /// <summary>
             /// Method to take First Name from User
-            /// </summary
+            /// </summary>
             public static string inputFirstName()
              {
                 Console.Write("Enter Your First name : ");
@@ -21,7 +21,7 @@ namespace User_Registration
 
             /// <summary>
             /// Method to take Last Name from User
-            /// </summary
+            /// </summary>
             public static string inputLastName()
              {
                 Console.Write("Enter Your Last name : ");
@@ -30,7 +30,7 @@ namespace User_Registration
 
             /// <summary>
             /// Method to take Email from User
-            /// </summary
+            /// </summary>
             public static string inputEmail()
              {
                 Console.Write("Enter Your Email Address : ");
@@ -39,7 +39,7 @@ namespace User_Registration
 
             /// <summary>
             /// Method to take Mobile Number from User
-            /// </summary
+            /// </summary>
             public static string inputMobileNumber()
             {
                 Console.Write("Enter Your Mobile Number : ");
@@ -48,7 +48,7 @@ namespace User_Registration
 
             /// <summary>
             /// Method to take Password from User
-            /// </summary
+            /// </summary>
             public static string inputPassword()
             {
                 Console.Write("Enter Your Password: ");
@@ -58,7 +58,7 @@ namespace User_Registration
 
         /// <summary>
         /// interface method to match
-        /// </summary
+        /// </summary>
         public string checkMatch(string expression, string stringToMatch)
         {
             Match match = Regex.Match(stringToMatch, expression, RegexOptions.None);
@@ -74,7 +74,7 @@ namespace User_Registration
 
         /// <summary>
         /// interface method to Validate First Name
-        /// </summary
+        /// </summary>
         public string ValidateFirstName(string FirstName)
         {
             string expression = "^[A-Z][a-zA-Z]{3,15}$";
@@ -82,7 +82,7 @@ namespace User_Registration
         }
         /// <summary>
         /// interface method to Validate Last Name
-        /// </summary
+        /// </summary>
         public string ValidateLastName(string LastName)
         {
             string expression = "^[A-Z][a-zA-Z]{3,15}$";
@@ -100,7 +100,7 @@ namespace User_Registration
 
         /// <summary>
         /// interface method to Validate Mobile Number
-        /// </summary
+        /// </summary>
         public string ValidateMobileNumber(string MobileNumber)
         {
             string expression = "^[0-9]{2}[ ][0-9]{10}$";
@@ -109,7 +109,7 @@ namespace User_Registration
 
         /// <summary>
         /// interface method to Validate Password
-        /// </summary
+        /// </summary>
         public string ValidatePassword(string Password)
         {
             string expression = "^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
@@ -118,7 +118,7 @@ namespace User_Registration
 
         /// <summary>
         /// main method, program execution 
-        /// </summary
+        /// </summary>
         static void Main(string[] args)
         {
             Console.WriteLine("Filled the Details of User and Register:");
