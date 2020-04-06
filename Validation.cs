@@ -8,7 +8,7 @@ namespace User_Registration
     {
         /// <summary>
         ///Create a validate interface for validate data
-        /// </summary
+        /// </summary>
         interface Validate
         {
             string checkMatch(string expression, string stringToCheck);
