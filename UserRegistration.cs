@@ -5,45 +5,66 @@ namespace User_Registration
 {
     class UserRegistration : Validation
     {
+        /// <summary>
+        /// Class for User Inputs
+        /// </summary
         class Userinput
         {
-             public static string inputFirstName()
+            /// <summary>
+            /// Method to take First Name from User
+            /// </summary
+            public static string inputFirstName()
              {
                 Console.Write("Enter Your First name : ");
                 return Console.ReadLine();
              }
 
-             public static string inputLastName()
+            /// <summary>
+            /// Method to take Last Name from User
+            /// </summary
+            public static string inputLastName()
              {
                 Console.Write("Enter Your Last name : ");
                 return Console.ReadLine();
              }
 
-             public static string inputEmail()
+            /// <summary>
+            /// Method to take Email from User
+            /// </summary
+            public static string inputEmail()
              {
                 Console.Write("Enter Your Email Address : ");
                 return Console.ReadLine();
              }
 
+            /// <summary>
+            /// Method to take Mobile Number from User
+            /// </summary
             public static string inputMobileNumber()
             {
                 Console.Write("Enter Your Mobile Number : ");
                 return Console.ReadLine();
             }
 
+            /// <summary>
+            /// Method to take Password from User
+            /// </summary
             public static string inputPassword()
             {
                 Console.Write("Enter Your Password: ");
                 return Console.ReadLine();
             }
         }
-        // interface method to match
+
+        /// <summary>
+        /// interface method to match
+        /// </summary
         public string checkMatch(string expression, string stringToMatch)
         {
-           var match = Regex.Match(stringToMatch, expression, RegexOptions.None);
+            Match match = Regex.Match(stringToMatch, expression, RegexOptions.None);
             if (match.Success)
             {
-                return "Details are Valid";
+                return "is valid";
             }
             else
             {
@@ -51,38 +72,53 @@ namespace User_Registration
             }
         }
 
-
-        //method to Validate First Name
+        /// <summary>
+        /// interface method to Validate First Name
+        /// </summary
         public string ValidateFirstName(string FirstName)
         {
-            var expression = "^[A-Z][a-zA-Z]{3,15}$";
+            string expression = "^[A-Z][a-zA-Z]{3,15}$";
             return checkMatch(expression, stringToMatch: FirstName);
         }
-        //method to Validate Last Name
+        /// <summary>
+        /// interface method to Validate Last Name
+        /// </summary
         public string ValidateLastName(string LastName)
         {
-            var expression = "^[A-Z][a-zA-Z]{3,15}$";
+            string expression = "^[A-Z][a-zA-Z]{3,15}$";
             return checkMatch(expression, stringToMatch: LastName);
         }
-        //method to validate Email
+
+        /// <summary>
+        /// interface method to Validate Email
+        /// </summary
         public string ValidateEmail(string Email)
         {
-            var expression = "^[a-zA-Z0-9]{1,}([.]?[-]?[+]?[a-zA-Z0-9]{1,})?[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$";
+            string expression = "^[a-zA-Z0-9]{1,}([.]?[-]?[+]?[a-zA-Z0-9]{1,})?[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$";
             return checkMatch(expression, stringToMatch: Email);
         }
-        //method to validate Mobile Number
+
+        /// <summary>
+        /// interface method to Validate Mobile Number
+        /// </summary
         public string ValidateMobileNumber(string MobileNumber)
         {
-            var expression = "^[0-9]{2}[ ][0-9]{10}$";
+            string expression = "^[0-9]{2}[ ][0-9]{10}$";
             return checkMatch(expression, stringToMatch: MobileNumber);
         }
 
+        /// <summary>
+        /// interface method to Validate Password
+        /// </summary
         public string ValidatePassword(string Password)
         {
-            var expression = "^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
+            string expression = "^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
             return checkMatch(expression, stringToMatch: Password);
         }
 
+        /// <summary>
+        /// main method, program execution 
+        /// </summary
         static void Main(string[] args)
         {
             Console.WriteLine("Filled the Details of User and Register:");
